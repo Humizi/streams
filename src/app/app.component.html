@@ -1,0 +1,24 @@
+<div class="streams">
+  <ul class="streams__list">
+    <li class="streams__item">
+      <p class="streams__item-title">Первый стрим:</p>
+      <p>{{ data$ | async }}</p>
+    </li>
+
+    <li class="streams__item">
+      <p class="streams__item-title">Второй стрим:</p>
+      <p>{{ data$ | async }}</p>
+    </li>
+
+    <li class="streams__item">
+      <p class="streams__item-title">Третий стрим:</p>
+      <p>{{ data$ | async }}</p>
+    </li>
+  </ul>
+
+  @if (dataAPI$ | async; as data) {
+  <button class="streams__button" type="button" (click)="update()">
+    Update
+  </button>
+  }
+</div>
